@@ -1,7 +1,9 @@
+/* Styles de base pour les écrans de bureau */
 .contenuIframeClass {
 	width: 100%;
-	height: 100%;
-	position: absolute;
+	height: 80vh;
+	max-width: 1200px;
+	margin: 0 auto;
 	border: none;
 }
 
@@ -13,19 +15,50 @@
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
+	transform: translateY(-50%);
 	padding: 15px;
 	color: rgb(0, 0, 0);
 	font-weight: bold;
 	font-size: 30px;
-	visibility: hidden;
+	visibility: visible;
+	user-select: none;
+}
+
+.precedent {
+	left: 10px;
 }
 
 .suivant {
-	right: 0;
-	border-radius: 3px 0 0 3px;
+	right: 10px;
 }
 
-html, body {
-	margin: 0;
-	overflow: hidden;
+/* Media query pour les tablettes (écrans de 768px et moins) */
+@media (max-width: 768px) {
+	.contenuIframeClass {
+		height: 70vh;
+		padding: 0 10px;
+	}
+
+	.precedent, .suivant {
+		font-size: 24px;
+		padding: 10px;
+	}
+}
+
+/* Media query pour les petits écrans (écrans de 480px et moins) */
+@media (max-width: 480px) {
+	.contenuIframeClass {
+		height: 60vh;
+		padding: 0 5px;
+	}
+
+	.precedent, .suivant {
+		font-size: 20px;
+		padding: 8px;
+	}
+
+	/* Cache les flèches si l'écran est trop petit pour une navigation confortable */
+	.precedent, .suivant {
+		display: none;
+	}
 }
