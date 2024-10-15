@@ -1,13 +1,15 @@
-.contentIframeClass {
+.contenuIframeClass {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	border: none;
 }
-.dummyIFrameClass {
+
+.dummyIframeClass {
 	display: none;
 }
-.prev, .next {
+
+.precedent, .suivant {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
@@ -17,11 +19,13 @@
 	font-size: 30px;
 	visibility: hidden;
 }
-.next {
+
+.suivant {
 	right: 0;
 	border-radius: 3px 0 0 3px;
 }
+
 html, body {
 	margin: 0;
-	overflow: hidden
+	overflow: hidden;
 }
