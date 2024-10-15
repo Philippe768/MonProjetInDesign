@@ -5,6 +5,9 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	border: none;
+	opacity: 0;
+	transform: scale(0.9);
+	animation: fadeInScale 1s forwards;
 }
 
 .dummyIframeClass {
@@ -15,12 +18,14 @@
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
-	padding: 15px;
+	transform: translateY(-50%) scale(0.9);
+	padding: 20px;
 	color: rgb(0, 0, 0);
 	font-weight: bold;
-	font-size: 30px;
-	visibility: visible;
+	font-size: 35px;
+	opacity: 0;
+	animation: fadeInScale 1s forwards;
+	animation-delay: 0.3s;
 	user-select: none;
 }
 
@@ -55,46 +60,8 @@
 	.precedent, .suivant {
 		font-size: 20px;
 		padding: 8px;
+		display: none; /* Cache les flèches si l'écran est trop petit */
 	}
-
-	/* Cache les flèches si l'écran est trop petit pour une navigation confortable */
-	.precedent, .suivant {
-		display: none;
-	}
-}
-/* Styles pour augmenter la taille des éléments */
-.contenuIframeClass {
-	width: 100%;
-	height: 80vh;
-	max-width: 1200px;
-	margin: 0 auto;
-	border: none;
-	opacity: 0;
-	transform: scale(0.9);
-	animation: fadeInScale 1s forwards;
-}
-
-.precedent, .suivant {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%) scale(0.9);
-	padding: 20px; /* Augmenté pour plus de visibilité */
-	color: rgb(0, 0, 0);
-	font-weight: bold;
-	font-size: 35px; /* Augmenté pour être plus grand */
-	opacity: 0;
-	animation: fadeInScale 1s forwards;
-	animation-delay: 0.3s; /* Décalage pour que les flèches apparaissent après l'iframe */
-	user-select: none;
-}
-
-.precedent {
-	left: 10px;
-}
-
-.suivant {
-	right: 10px;
 }
 
 /* Animation pour affichage progressif */
